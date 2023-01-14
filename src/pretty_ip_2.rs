@@ -1,11 +1,25 @@
-pub fn get_colors() -> [&'static str; 16] {
-    return [
-        "🔴", "🟠", "🟡", "🟢", "🔵", "🟣", "⚫️", "⚪️", "🟥", "🟧", "🟨", "🟩", "🟦", "🟪", "⬛️",
-        "⬜️",
-    ];
+use regex::Regex;
+
+#[path = "util.rs"]
+mod util;
+
+pub fn invoke() -> String {
+    let re = Regex::new(r"\d+").unwrap();
+    let adjs: [&str; 256] = get_words();
+
+    util::prettify_ip(util::get_local_ip(), &|text: &str| {
+        let is_match = re.is_match(text);
+        return if is_match {
+            let index = text.parse::<usize>().ok().unwrap();
+            let res: &str = adjs[index];
+            util::color_wrap_front(index, res)
+        } else {
+            text.to_string()
+        };
+    }).join(".")
 }
 
-pub fn get_words() -> [&'static str; 256] {
+fn get_words() -> [&'static str; 256] {
     return [
         "able",
         "adorable",
