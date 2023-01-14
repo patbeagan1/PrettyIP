@@ -6,10 +6,15 @@ use std::net::IpAddr;
 use local_ip_address::local_ip;
 
 fn main() {
-    let adjs: [&str; 256] = adjective_words::get_words();
-    let re = Regex::new(r"\d+").unwrap();
 
-    let pretty_ip: String = prettify_ip(get_local_ip(), &|text: &str| {
+    println!("{}", pretty_ip_1());
+    println!("{}", pretty_ip_2());
+}
+fn pretty_ip_2() -> String {
+    let re = Regex::new(r"\d+").unwrap();
+    let adjs: [&str; 256] = adjective_words::get_words();
+
+    prettify_ip(get_local_ip(), &|text: &str| {
         let is_match = re.is_match(text);
         return if is_match {
             let index = text.parse::<usize>().ok().unwrap();
@@ -18,26 +23,22 @@ fn main() {
         } else {
             text.to_string()
         };
-    });
-    
-    println!("{}", pretty_ip);
+    })
+}
+
+fn pretty_ip_1() -> String {
+    let re = Regex::new(r"\d+").unwrap();
     let colors: [&str; 16] = adjective_words::get_colors();
 
-    let pretty_ip = prettify_ip(get_local_ip(), &|text| {
+    prettify_ip(get_local_ip(), &|text| {
         let is_match = re.is_match(text);
         return if is_match {
             let index = text.parse::<usize>().ok().unwrap();
-             format!("{}{}", colors[index / 16], colors[index % 16])
+            format!("{}{}", colors[index / 16], colors[index % 16])
         } else {
             text.to_string()
         };
-    });
-    println!("{}", pretty_ip);
-
-    //    let stdin = io::stdin();
-    //    for line in stdin.lock().lines() {
-    //        process_line(&adjs, &line.unwrap());
-    //    }
+    })
 }
 fn prettify_ip(ip: IpAddr, on_each: &dyn Fn(&str) -> String) -> String {
     let output: String = ip.to_string();
@@ -59,7 +60,4 @@ fn get_local_ip() -> IpAddr {
         println!("Error getting local IP: {:?}", my_local_ip);
     }
     return my_local_ip.unwrap();
-}
-fn process_line(adjs: &[&str; 256], line: &str) {
-    println!("{}", line);
 }
