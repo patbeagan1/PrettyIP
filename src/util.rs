@@ -15,11 +15,6 @@ pub fn prettify_ip(ip: IpAddr, on_each: &dyn Fn(&str) -> String) -> Vec<String> 
 
 pub fn get_local_ip() -> IpAddr {
     let my_local_ip = local_ip();
-    if let Ok(my_local_ip) = my_local_ip {
-        println!("Local IP address: {:?}", my_local_ip);
-    } else {
-        println!("Error getting local IP: {:?}", my_local_ip);
-    }
     return my_local_ip.unwrap();
 }
 

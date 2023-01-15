@@ -1,13 +1,15 @@
+use std::net::IpAddr;
+
 use regex::Regex;
 
 #[path = "util.rs"]
 mod util;
 
-pub fn invoke() -> String {
+pub fn invoke(ip: IpAddr) -> String {
     let re = Regex::new(r"\d+").unwrap();
     let adjs: [&str; 256] = get_words();
 
-    util::prettify_ip(util::get_local_ip(), &|text: &str| {
+    util::prettify_ip(ip, &|text: &str| {
         let is_match = re.is_match(text);
         return if is_match {
             let index = text.parse::<usize>().ok().unwrap();
