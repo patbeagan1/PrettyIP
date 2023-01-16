@@ -1,128 +1,360 @@
-    Aardvark
-    Alligator
-    Alpaca
-    Anaconda
-    Ant
-    Anteater
-    Antelope
-    Aphid
-    Armadillo
-    Baboon
-    Badger
-    Barracuda
-    Bass
-    Bat
-    Beaver
-    Bedbug
-    Bee
-    Bird
-    Bison
-    Bobcat
-    Buffalo
-    Butterfly
-    Buzzard
-    Camel
-    Canada Lynx
-    Carp
-    Cat
-    Caterpillar
-    Catfish
-    Cheetah
-    Chicken
-    Chimpanzee
-    Chipmunk
-    Cobra
-    Cod
-    Condor
-    Cougar
-    Cow
-    Coyote
-    Crab
-    Cricket
-    Crocodile
-    Crow
-    Cuckoo
-    Deer
-    Dinosaur
-    Dog
-    Dolphin
-    Donkey
-    Dove
-    Dragonfly
-    Duck
-    Eagle
-    Eel
-    Elephant
-    Emu
-    Falcon
-    Ferret
-    Finch
-    Fish
-    Flamingo
-    Flea
-    Fly
-    Fox
-    Frog
-    Goat
-    Goose
-    Gopher
-    Gorilla
-    Hamster
-    Hare
-    Hawk
-    Hippopotamus
-    Horse
-    Hummingbird
-    Humpback Whale
-    Husky
-    Iguana
-    Impala
-    Kangaroo
-    Lemur
-    Leopard
-    Lion
-    Lizard
-    Llama
-    Lobster
-    Monkey
-    Moose
-    Mosquito
-    Moth
-    Mouse
-    Mule
-    Octopus
-    Orca
-    Ostrich
-    Otter
-    Owl
-    Ox
-    Oyster
-    Panda
-    Parrot
-    Peacock
-    Pelican
-    Penguin
-    Perch
-    Pheasant
-    Pig
-    Pigeon
-    Porcupine
-    Quagga
-    Rabbit
-    Raccoon
-    Rat
-    Rattlesnake
-    Rooster
-    Seal
-    Sheep
-    Skunk
-    Sloth
-    Snail
-    Snake
-    Spider
-    Tiger
-    Whale
-    Wolf
-    Wombat
-    Zebra
+Aardvark
+Alligator
+Alpaca
+Anaconda
+Ant
+Anteater
+Antelope
+Aphid
+Armadillo
+Baboon
+Badger
+Barracuda
+Bass
+Bat
+Beaver
+Bug
+Bee
+Bird
+Bison
+Bobcat
+Buffalo
+Butterfly
+Buzzard
+Camel
+Lynx
+Carp
+Cat
+Caterpillar
+Catfish
+Cheetah
+Chicken
+Chimpanzee
+Chipmunk
+Cobra
+Cod
+Condor
+Cougar
+Cow
+Coyote
+Crab
+Cricket
+Crocodile
+Crow
+Cuckoo
+Deer
+Dinosaur
+Dog
+Dolphin
+Donkey
+Dove
+Dragonfly
+Duck
+Eagle
+Eel
+Elephant
+Emu
+Falcon
+Ferret
+Finch
+Fish
+Flamingo
+Toad
+Giraffe
+Flea
+Fly
+Fox
+Frog
+Goat
+Goose
+Gopher
+Gorilla
+Hamster
+Hare
+Hawk
+Hippopotamus
+Horse
+Hummingbird
+Tarantula
+Jellyfish
+Tortoise
+Cuttlefish
+Opossum
+Panda
+Ayeaye
+Dolphin
+Hammerhead
+Manta
+Whale
+Husky
+Iguana
+Impala
+Kangaroo
+Lemur
+Leopard
+Lion
+Lizard
+Llama
+Lobster
+Monkey
+Moose
+Mosquito
+Moth
+Mouse
+Mule
+Octopus
+Orca
+Ostrich
+Otter
+Owl
+Ox
+Oyster
+Panda
+Parrot
+Peacock
+Pelican
+Penguin
+Perch
+Pheasant
+Pig
+Pigeon
+Orangutan
+Perch
+Porcupine
+Quagga
+Rabbit
+Raccoon
+Quail
+Partridge
+Dingo
+Boar
+Rat
+Rattlesnake
+Rooster
+Seal
+Sheep
+Cheetah
+Zebra
+Gazelle
+Wildabeast
+Lion
+Buffalo
+Cougar
+Seal
+Seagull
+Walrus
+Starfish
+Cuttlefish
+Slug
+Seahorse
+Albatross
+Wasp
+Skunk
+Sloth
+Snail
+Snake
+Fox
+Dog
+Cat
+Caterpillar
+Cow
+Pig
+Turkey
+Lizard
+Alligator
+Caiman
+Crocodile
+Sheep
+Antelope
+Agouti
+Goat
+Spider
+Tiger
+Whale
+Wolf
+Wombat
+Zebra
+Abalone
+Antelope
+Albatross
+Alligator
+Civet
+Bat
+Binturong
+Baboon
+Camel
+Badger
+Camel
+Cheetah
+Cougar
+Caribou
+Carp
+Cassowary
+Cat
+Caterpillar
+Damselfish
+Donkey
+Dragonfly
+Dormouse
+Duck
+Dugong
+Beetle
+Dolphin
+Echidna
+Ermine
+Wolf
+Eel
+Egret
+Flamingo
+Frogmouth
+Fox
+Frog
+Fossa
+Gazelle
+Giraffe
+Gibbon
+Goose
+Goldfish
+Groundhog
+Hawk
+Hornbill
+Hyena
+Heron
+Hippopotamus
+Hound
+Insect
+Impala
+Bullfrog
+Ibex
+Ibis
+Warbler
+Jay
+Jellyfish
+Jackrabbit
+Kestrel
+Penguin
+Kingfisher
+Kinkajou
+Kite
+Leopard
+Lion
+Lionfish
+Lizard
+Llama
+Lobster
+Locust
+Moose
+Mosquito
+Gorilla
+Mouse
+Frog
+Salamander
+Mayfly
+Cardinal
+Needlefish
+Osprey
+Ostrich
+Otter
+Owl
+Butterfly
+Ox
+Oyster
+Bat
+Puffin
+Hippo
+Stork
+Partridge
+Angelfish
+Snapper
+Quetzal
+Quokka
+Panda
+Reindeer
+Macaque
+Rhinoceros
+Lemur
+Roadrunner
+Robin
+Crab
+Salmon
+Crane
+Sandpiper
+Tapir
+Tarantula
+Eagle
+Owl
+Urchin
+Monkey
+Viper
+Vole
+Vulture
+Corgi
+Manatee
+Gorilla
+Whale
+Tiger
+Wildcat
+Wildebeest
+Yak
+Worm
+Python
+Moth
+Wasp
+Collie
+Spaniel
+Parrot
+Squid
+Loon
+Grackle
+Gecko
+Coyote
+Buzzard
+Copperhead
+Cuckoo
+Eider
+Flea
+Flounder
+Firefly
+Sunfish
+Tamarin
+Goshawk
+Vulture
+Lemur
+Sparrow
+Wren
+Hyena
+Oriole
+Horse
+Iguana
+Jackal
+Jackdaw
+Cobra
+Kiwi
+Kakapo
+Krill
+Krait
+Koi
+Weevil
+Rat
+Oarfish
+Parakeet
+Pika
 
+Lamprey
+Meerkat
+Cricket
+Muntjac
+Mule
+Newt
+Nautilus
+Nuthatch
+Hornbill
+Squirrel
+Baboon
+Mongoose
+Terrier
+Yellowjacket
+Agouti
+Wren
+Zorilla
+Finch
