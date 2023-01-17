@@ -6,7 +6,7 @@ use std::net::{IpAddr, Ipv4Addr};
 use clap::Parser;
 use formats::{adj_animal, two_color, color_line, just_colored};
 
-/// Simple program to greet a person
+/// Prints out an IP address in a more colorful way
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
