@@ -2,19 +2,18 @@ use std::net::IpAddr;
 
 use regex::Regex;
 
-#[path = "util.rs"]
-mod util;
+use crate::util;
 
 pub fn invoke(ip: IpAddr) -> String {
     let re = Regex::new(r"\d+").unwrap();
 
-    util::prettify_ip(ip, &|text: &str| {
+    util::prettify_ip(ip, &|text| {
         let is_match = re.is_match(text);
         return if is_match {
             let index = text.parse::<usize>().ok().unwrap();
-            util::color_wrap_back(index / 16, util::color_wrap_front(index % 16, "▀").as_str())
+            util::color_wrap_front(index, index.to_string().as_str())
         } else {
             text.to_string()
         };
-    }).join("")
+    }).join(".")
 }

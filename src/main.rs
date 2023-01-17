@@ -1,13 +1,10 @@
-mod pretty_ip_1;
-mod pretty_ip_2;
-mod pretty_ip_3;
-mod pretty_ip_4;
-mod pretty_ip_5;
+mod formats;
 mod util;
 
 use std::net::{IpAddr, Ipv4Addr};
 
 use clap::Parser;
+use formats::{adj_animal, two_color, color_line, just_colored};
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
@@ -44,28 +41,37 @@ fn main() {
     };
 
     if args.all {
-        for i in 1..=5 {
-            println!("{}: {}", i, process(i, ip).unwrap())
-        }
+        handle_arg_all(ip);
     } else {
-        println!(
-            "{}",
-            match process(args.format, ip) {
-                Ok(it) => it,
-                Err(it) => it.to_string(),
-            }
-        );
+        handle_arg_single_format(args.format, ip);
+    }
+}
+
+fn handle_arg_single_format(format: u8, ip: IpAddr) {
+    println!(
+        "{}",
+        match process(format, ip) {
+            Ok(it) => it,
+            Err(it) => it.to_string(),
+        }
+    );
+}
+
+fn handle_arg_all(ip: IpAddr) {
+    for i in 1..=5 {
+        println!("{}: {}", i, process(i, ip).unwrap())
     }
 }
 
 fn process(format: u8, ip: IpAddr) -> Result<String, &'static str> {
     match format {
         0 => Ok(ip.to_string()),
-        1 => Ok(pretty_ip_1::invoke(ip)),
-        2 => Ok(pretty_ip_2::invoke(ip)),
-        3 => Ok(pretty_ip_3::invoke(ip)),
-        4 => Ok(pretty_ip_4::invoke(ip)),
-        5 => Ok(pretty_ip_5::invoke(ip)),
+        1 => Ok(formats::color_dot::invoke(ip)),
+        2 => Ok(adj_animal::invoke(ip)),
+        3 => Ok(two_color::invoke(ip)),
+        4 => Ok(just_colored::invoke(ip)),
+        5 => Ok(color_line::invoke(ip)),
+        // reminder to add new variation to handle_arg_all
         _ => Err("This format is not yet implemented"),
     }
 }
