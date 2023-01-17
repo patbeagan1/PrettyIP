@@ -11,7 +11,7 @@ use formats::{adj_animal, two_color, color_line, just_colored};
 #[command(author, version, about, long_about = None)]
 struct Args {
     /// The format that we want to use
-    #[arg(short, long, default_value_t = 4)]
+    #[arg(short, long, default_value_t = 1)]
     format: u8,
 
     /// Prints out all the formats at once
@@ -66,10 +66,10 @@ fn handle_arg_all(ip: IpAddr) {
 fn process(format: u8, ip: IpAddr) -> Result<String, &'static str> {
     match format {
         0 => Ok(ip.to_string()),
-        1 => Ok(formats::color_dot::invoke(ip)),
+        1 => Ok(just_colored::invoke(ip)),
         2 => Ok(adj_animal::invoke(ip)),
         3 => Ok(two_color::invoke(ip)),
-        4 => Ok(just_colored::invoke(ip)),
+        4 => Ok(formats::color_dot::invoke(ip)),
         5 => Ok(color_line::invoke(ip)),
         // reminder to add new variation to handle_arg_all
         _ => Err("This format is not yet implemented"),
