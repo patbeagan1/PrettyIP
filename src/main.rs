@@ -58,7 +58,7 @@ fn handle_arg_single_format(format: u8, ip: IpAddr) {
 }
 
 fn handle_arg_all(ip: IpAddr) {
-    for i in 1..=5 {
+    for i in 0..=5 {
         println!("{}: {}", i, process(i, ip).unwrap())
     }
 }
