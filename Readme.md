@@ -4,6 +4,14 @@ Prints out an ip address in a prettier, easy to scan way.
 
 <img width="484" alt="Screen Shot 2023-01-17 at 1 27 22 PM" src="https://user-images.githubusercontent.com/10187351/212994787-82c2979b-b4ff-4774-8d3d-3270da9036ee.png">
 
+## Installation
+
+```sh
+cargo install pretty_ip     
+```
+
+## Demo
+
 | With the default (LAN) ip | With a given ip |
 |-|-|
 |<img width="105" alt="Screen Shot 2023-01-17 at 1 31 31 PM" src="https://user-images.githubusercontent.com/10187351/212994541-0e69f875-d0a6-4be6-a744-85adf3d01272.png">|<img width="166" alt="Screen Shot 2023-01-17 at 1 31 11 PM" src="https://user-images.githubusercontent.com/10187351/212994543-103d7c03-1b06-4b38-9011-b5e7d2eaff86.png">|
