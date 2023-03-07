@@ -3,6 +3,8 @@ name = "pretty_ip"
 version = "0.1.0"
 authors = ["Patrick Beagan <pbeagan1@gmail.com>"]
 edition = "2018"
+license = "MIT"
+description = "Prints an ip address in an easily scannable form. Multiple formats are included. By default, it will print the local ip address."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
