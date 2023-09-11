@@ -17,13 +17,15 @@ pub fn invoke(ip: IpAddr) -> String {
         return if is_match {
             let index = text.parse::<usize>().ok().unwrap();
             if current % 2 == 0 {
-                util::color_wrap_front(index, adjs[index])
+                util::color_wrap_front(index,
+                util::color_wrap_back((index + 17) % 256, adjs[index]).as_str())
             } else {
-                util::color_wrap_front(index, animals[index])
+                util::color_wrap_front(index,
+                util::color_wrap_back((index + 17) % 256, animals[index]).as_str())
             }
         } else {
             text.to_string()
         };
     })
-    .join(".")
+    .join("-")
 }

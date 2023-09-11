@@ -5,6 +5,7 @@ use std::net::{IpAddr, Ipv4Addr};
 
 use clap::Parser;
 use formats::{adj_animal, two_color, color_line, just_colored};
+use crate::formats::with_netname;
 
 /// Prints out an IP address in a more colorful way
 #[derive(Parser, Debug)]
@@ -71,6 +72,7 @@ fn process(format: u8, ip: IpAddr) -> Result<String, &'static str> {
         3 => Ok(two_color::invoke(ip)),
         4 => Ok(formats::color_dot::invoke(ip)),
         5 => Ok(color_line::invoke(ip)),
+        6 => Ok(with_netname::invoke(ip)),
         // reminder to add new variation to handle_arg_all
         _ => Err("This format is not yet implemented"),
     }
